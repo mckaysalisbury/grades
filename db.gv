@@ -1,4 +1,14 @@
 digraph db {
-    node [shape=rectangle]
+    rankdir=RL
+    node [shape=record]
     student
+    class
+    studentClass [label="studentClass|section?"]
+    studentClass -> student, class
+    turnIn -> student, assignment
+    user
+    grade -> turnIn
+    student:n, teacher:n -> user:s
+
+    assignment -> class -> teacher
 }
