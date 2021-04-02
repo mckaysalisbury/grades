@@ -2,16 +2,25 @@ digraph dataflow {
     label="CodeUpload system interactions diagram\nDataFlow Style"
     rankdir=LR
     subgraph clusterGrading {
+        label="Grading\nproviders"
         TurnItIn
     }
     subgraph clusterLMS {
+        label="LMS"
         TheU,
         VGHS
+    }
+    subgraph clusterPeople {
+        label="People"
+        teachers
+        students
     }
 
     database [shape=cylinder]
     toBeGraded, toBeAnalyzed [shape=cds]
-    Students -> upload -> database
+    students, teachers -> auth -> database
+    students -> upload -> database
+    teachers -> classes -> database
     database -> grade, analyze [dir=back]
     upload -> toBeGraded:w, toBeAnalyzed:w
     toBeGraded:e -> grade -> VGHS, TheU
