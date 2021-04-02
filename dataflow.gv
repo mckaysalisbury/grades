@@ -14,6 +14,7 @@ digraph dataflow {
         label="People"
         teachers
         students
+        auditors [label="auditors?"]
     }
 
     database [shape=cylinder]
@@ -21,8 +22,10 @@ digraph dataflow {
     students, teachers -> auth -> database
     students -> upload -> database
     teachers -> classes -> database
-    database -> grade, analyze [dir=back]
+    database -> grade, analyze [dir=back, color="blue"]
     upload -> toBeGraded:w, toBeAnalyzed:w
     toBeGraded:e -> grade -> VGHS, TheU
     toBeAnalyzed:e -> analyze -> TurnItIn
+
+    auditors -> students, teachers [dir=none, style=dashed]
 }

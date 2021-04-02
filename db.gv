@@ -2,15 +2,15 @@ digraph db {
     label="CodeUpload database diagram\nAlphora Style"
     rankdir=RL
     node [shape=record]
-    student
-    class
+
+    assignment [label="assignment|due:DateTime\nmetrics*"]
+    upload [label="upload|code*"]
     studentClass [label="studentClass|section?"]
     studentClass -> student, class
-    turnIn -> student, assignment
+    upload -> student, assignment
 
-    user
-    grade, analysis -> turnIn
+    grade, analysis -> upload
     student:n, teacher:n -> user:s
 
-    assignment -> class -> teacher
+    tests -> assignment -> class -> teacher
 }
