@@ -4,13 +4,19 @@ digraph db {
     node [shape=record]
 
     assignment [label="assignment|due:DateTime\nmetrics*"]
-    upload [label="upload|code*"]
+    upload [label="upload|code: Code*"]
     studentClass [label="studentClass|section?"]
+    tests [label="tests|code: Code*"]
+    grading [label="grading|grade\nlog"]
+
     studentClass -> student, class
     upload -> student, assignment
 
-    grade, analysis -> upload
+    grading, analysis -> upload
     student:n, teacher:n -> user:s
 
     tests -> assignment -> class -> teacher
+
+    # invis helpers
+    assignment -> user [style=invis]
 }
