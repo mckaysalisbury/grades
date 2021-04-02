@@ -1,5 +1,5 @@
 digraph db {
-    label="ClaassDatabase diagram\nAlphora Style"
+    label="CodeUpload database diagram\nAlphora Style"
     rankdir=RL
     node [shape=record]
     student
@@ -7,6 +7,7 @@ digraph db {
     studentClass [label="studentClass|section?"]
     studentClass -> student, class
     turnIn -> student, assignment
+
     user
     grade, analysis -> turnIn
     student:n, teacher:n -> user:s
