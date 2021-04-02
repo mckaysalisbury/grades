@@ -15,10 +15,12 @@
 # Context / System Interactions
 
 ![System Interactions Dataflow](http://pointillism.io/mckaysalisbury/grades/prod/dataflow.gv)
+[Dataflow Style](https://blog.mckaysalisbury.com/2020/04/dataflow-style-diagramming.html)
 
 # Details and Decisions
 
 ![DB](http://pointillism.io/mckaysalisbury/grades/prod/db.gv)
+[Alphora Style](https://blog.mckaysalisbury.com/2020/03/alphora-style-database-diagramming.html)
 
 ## Decisions
 
