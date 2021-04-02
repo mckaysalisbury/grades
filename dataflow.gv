@@ -25,7 +25,7 @@ digraph dataflow {
     teachers -> classes -> database
     database -> grading, analyze [dir=back, color="blue"]
     upload -> uploaded:w
-    uploaded:e -> grading -> gradeReporing -> VGHS, TheU
+    uploaded:e -> grading -> gradeReporting -> VGHS, TheU
     uploaded:e -> analyze -> TurnItIn
 
     auditors -> students, teachers [dir=none, style=dashed]

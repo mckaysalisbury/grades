@@ -1,0 +1,39 @@
+teacher:
+
+GET, POST /teacher/{id}/class{classId: uuid}
+{
+    classId: uuid,
+    teacherId: uuid, // teacherId // optional for POST?
+    // universityId: uuid, // univeristyId
+    classNumber: string, // "CS236"
+    // sections: int[],
+    description: string, // "Discrete Mathematics"
+
+    // possible expansions
+    // assignments: [ assignment[] ]
+    // students: [ Student[] ] // [ StudentClass[] ]
+}
+
+GET, POST /assignment/{assignmentId: uuid}
+{
+    assignmentId: uuid,
+    classId: uuid,
+
+    // a bunch of other things
+    due: DateTime,
+    timeAllotted: TimeSpan,
+    ramAllotted: numberOfBytes
+}
+
+GET /uploads/{}
+{
+    uploadId,
+    studentId,
+    assignmentId: uuid,
+    grading?: Grading,
+    code: Code*
+}
+
+student:
+GET, POST /uploads/{}  // not patch or update
+GET /classes

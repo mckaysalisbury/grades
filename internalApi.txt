@@ -1,0 +1,8 @@
+grading -> grade reporting
+
+{
+    student, // includes university? or also using universityId
+    assignment,
+    score,
+    //code,
+}
