@@ -49,4 +49,4 @@ There could be more bigger risks than this, but these are the biggest that come 
   * This seems feasible to be developed in the alloted time and budget, but does the team agree?
   * I think the systems should be able to handle the load required, but the database might be the bottleneck
 * **Financial**
-  * *Does it actually make sense to build this?* With this plan, and discussions with the team, costs can be estimated, and pricing models decided. Along with market analysis performed, it can help us answer that question.
+  * *Does it actually make sense to build this?* With this plan, and discussions with the team, costs can be estimated, and pricing models decided (The pricing models might affect system design, which would affect costs, especially in the future.). Along with market analysis performed, it can help us answer that question. (Along with the related question: *Do we have enough money to start building this?*)
