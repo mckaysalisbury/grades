@@ -23,7 +23,7 @@
 ## Decisions
 
 ### Capture Market Share
-Capture market share means **Fast time to market**. Which means **simpler architecture** over flexibility and scalability for the future. Each of the pieces could be separated, but it might be easier to do development in one repo as one system, but the principle of cautious design tells us to plan for the future, so those boundaries might make for good separatable modules for the future.
+Capture market share means **Fast time to market**. Which means **simpler architecture** over flexibility and scalability for the future. Each of the pieces could be separated, but it might be easier to do development in one repo as one system, but the principle of cautious design tells us to plan for the future, so those boundaries might make for good separatable modules for the future. Also, after an upload multiple tasks need to be performed. Multiple task queues might be better, but a single topic-based system is probably sufficient.
 
 #### The "That's a good problem to have" philosophy
 In general, it's a good idea to not solve problems that are good problems to have, because you'll be in a better position then.

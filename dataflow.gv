@@ -18,14 +18,15 @@ digraph dataflow {
     }
 
     database [shape=cylinder]
-    toBeGraded, toBeAnalyzed [shape=cds]
+    uploaded [shape=cds]
+    
     students, teachers -> auth -> database
     students -> upload -> database
     teachers -> classes -> database
     database -> grading, analyze [dir=back, color="blue"]
-    upload -> toBeGraded:w, toBeAnalyzed:w
-    toBeGraded:e -> grading -> gradeReporing -> VGHS, TheU
-    toBeAnalyzed:e -> analyze -> TurnItIn
+    upload -> uploaded:w
+    uploaded:e -> grading -> gradeReporing -> VGHS, TheU
+    uploaded:e -> analyze -> TurnItIn
 
     auditors -> students, teachers [dir=none, style=dashed]
 }
